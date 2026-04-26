@@ -9,6 +9,20 @@ class DBManager:
     def __init__(self):
         """Конструктор класса DBManager."""
         self.params = Config.get_db_params()
+        self.conn = None
+        self.cur = None
+
+    def connect(self):
+        """Устанавливает соединение с БД."""
+        self.conn = psycopg2.connect(**self.params)
+        self.cur = self.conn.cursor()
+
+    def close(self):
+        """Закрывает соединение с БД."""
+        if self.cur:
+            self.cur.close()
+        if self.conn:
+            self.conn.close()
 
     def get_companies_and_vacancies_count(self) -> List[Tuple[Any, ...]]:
         """Получает список всех компаний и количество вакансий у каждой компании."""
