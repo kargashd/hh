@@ -103,8 +103,6 @@ hh/
 
 ### Таблицы
 
-### Таблицы
-
 **employers**
 
 - employer_id INTEGER PRIMARY KEY — ID компании
