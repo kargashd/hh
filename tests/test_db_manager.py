@@ -44,6 +44,8 @@ class TestDBManager:
         assert result[0][0] == "Яндекс"
         assert result[0][1] == "Python dev"
         mock_cursor.execute.assert_called_once()
+        mock_cursor.close.assert_called_once()
+        mock_conn.close.assert_called_once()
 
     @patch("src.db_manager.psycopg2.connect")
     def test_get_avg_salary(self, mock_connect):
@@ -59,6 +61,8 @@ class TestDBManager:
 
         assert result == 125000.0
         mock_cursor.execute.assert_called_once()
+        mock_cursor.close.assert_called_once()
+        mock_conn.close.assert_called_once()
 
     @patch("src.db_manager.psycopg2.connect")
     def test_get_avg_salary_none(self, mock_connect):
@@ -73,6 +77,9 @@ class TestDBManager:
         result = db.get_avg_salary()
 
         assert result == 0.0
+        mock_cursor.execute.assert_called_once()
+        mock_cursor.close.assert_called_once()
+        mock_conn.close.assert_called_once()
 
     @patch("src.db_manager.psycopg2.connect")
     def test_get_vacancies_with_higher_salary(self, mock_connect):
@@ -91,3 +98,6 @@ class TestDBManager:
         assert len(result) == 1
         assert result[0][0] == "Яндекс"
         assert result[0][1] == "Senior Python dev"
+        mock_cursor.execute.assert_called_once()
+        mock_cursor.close.assert_called_once()
+        mock_conn.close.assert_called_once()
