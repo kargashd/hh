@@ -1,0 +1,74 @@
+[
+    {
+        "employer_id": 80,
+        "employer_name": "Яндекс",
+        "employer_url": "https://hh.ru/employer/80",
+        "vacancies_url": "https://hh.ru/vacancies?employer_id=80",
+        "vacancies": [
+            {
+                "vacancy_id": 101,
+                "vacancy_name": "Backend Python Developer",
+                "salary_from": 200000,
+                "salary_to": 300000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/101"
+            },
+            {
+                "vacancy_id": 102,
+                "vacancy_name": "Senior Go Developer",
+                "salary_from": 250000,
+                "salary_to": 350000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/102"
+            },
+            {
+                "vacancy_id": 103,
+                "vacancy_name": "Data Scientist",
+                "salary_from": 180000,
+                "salary_to": 280000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/103"
+            }
+        ]
+    },
+    {
+        "employer_id": 1740,
+        "employer_name": "Google",
+        "employer_url": "https://hh.ru/employer/1740",
+        "vacancies_url": "https://hh.ru/vacancies?employer_id=1740",
+        "vacancies": [
+            {
+                "vacancy_id": 201,
+                "vacancy_name": "Software Engineer",
+                "salary_from": 300000,
+                "salary_to": 400000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/201"
+            },
+            {
+                "vacancy_id": 202,
+                "vacancy_name": "Site Reliability Engineer",
+                "salary_from": 350000,
+                "salary_to": 450000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/202"
+            }
+        ]
+    },
+    {
+        "employer_id": 3776,
+        "employer_name": "МТС",
+        "employer_url": "https://hh.ru/employer/3776",
+        "vacancies_url": "https://hh.ru/vacancies?employer_id=3776",
+        "vacancies": [
+            {
+                "vacancy_id": 301,
+                "vacancy_name": "Java Developer",
+                "salary_from": 150000,
+                "salary_to": 250000,
+                "salary_currency": "RUR",
+                "vacancy_url": "https://hh.ru/vacancy/301"
+            }
+        ]
+    }
+]
