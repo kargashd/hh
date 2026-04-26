@@ -99,37 +99,36 @@ hh/
 └── README.md                     # Документация проекта
 ```
 
-## Базы данных
+## База данных
 
 ### Таблицы
 
-#### employers
+### Таблицы
 
-Колонка	Тип	Описание
-employer_id	INTEGER PRIMARY KEY	ID компании
-employer_name	VARCHAR(255)	Название компании
-employer_url	VARCHAR(255)	Ссылка на компанию
-vacancies_url	VARCHAR(255)	Ссылка на вакансии
+**employers**
 
-#### vacancies
+- employer_id INTEGER PRIMARY KEY — ID компании
+- employer_name VARCHAR(255) — Название компании
+- employer_url VARCHAR(255) — Ссылка на компанию
+- vacancies_url VARCHAR(255) — Ссылка на вакансии
 
-Колонка	Тип	Описание
-vacancy_id	INTEGER PRIMARY KEY	ID вакансии
-employer_id	INTEGER FOREIGN KEY	ID компании
-vacancy_name	VARCHAR(255)	Название вакансии
-salary_from	INTEGER	Нижняя граница зарплаты
-salary_to	INTEGER	Верхняя граница зарплаты
-salary_currency	VARCHAR(10)	Валюта
-vacancy_url	VARCHAR(255)	Ссылка на вакансию
+**vacancies**
+
+- vacancy_id INTEGER PRIMARY KEY — ID вакансии
+- employer_id INTEGER FOREIGN KEY — ID компании
+- vacancy_name VARCHAR(255) — Название вакансии
+- salary_from INTEGER — Нижняя граница зарплаты
+- salary_to INTEGER — Верхняя граница зарплаты
+- salary_currency VARCHAR(10) — Валюта
+- vacancy_url VARCHAR(255) — Ссылка на вакансию
 
 ### Методы DBManager
 
-Метод	Описание
-get_companies_and_vacancies_count()	Компании и количество вакансий
-get_all_vacancies()	Все вакансии с компанией, зарплатой, ссылкой
-get_avg_salary()	Средняя зарплата по вакансиям
-get_vacancies_with_higher_salary()	Вакансии с зарплатой выше средней
-get_vacancies_with_keyword(keyword)	Поиск по ключевому слову
+- get_companies_and_vacancies_count() — Компании и количество вакансий
+- get_all_vacancies() — Все вакансии с компанией, зарплатой, ссылкой
+- get_avg_salary() — Средняя зарплата по вакансиям
+- get_vacancies_with_higher_salary() — Вакансии с зарплатой выше средней
+- get_vacancies_with_keyword(keyword) — Поиск по ключевому слову
 
 ## Тестирование
 Для тестирования всех модулей используется Pytest.
